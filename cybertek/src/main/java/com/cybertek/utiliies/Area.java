@@ -1,8 +1,7 @@
-package com.cybertek.services;
+package com.cybertek.utiliies;
 
 import com.cybertek.enums.AreaType;
 import com.cybertek.enums.RoomType;
-import com.cybertek.interfaces.FloorArea;
 import com.cybertek.interfaces.GetAreaType;
 import org.springframework.stereotype.Component;
 

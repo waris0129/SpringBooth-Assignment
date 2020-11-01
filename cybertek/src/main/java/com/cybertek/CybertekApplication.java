@@ -14,9 +14,11 @@ public class CybertekApplication {
 
 		ApplicationContext context = SpringApplication.run(CybertekApplication.class, args);
 
-		CallService service = context.getBean("customer", CallService.class);
+		CallService tx = context.getBean("taxes", CallService.class);
 
-		service.getTotalPrice(Cities.AUSTIN,RoomType.BED_ROOM);
+		CallService va = context.getBean("virginia", CallService.class);
+
+		tx.getTotalPrice(Cities.AUSTIN,RoomType.KITCHEN);
 
 	}
 
