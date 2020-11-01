@@ -2,7 +2,7 @@ package com.cybertek;
 
 import com.cybertek.enums.Cities;
 import com.cybertek.enums.RoomType;
-import com.cybertek.interfaces.CallServices;
+import com.cybertek.interfaces.CallService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,13 +14,9 @@ public class CybertekApplication {
 
 		ApplicationContext context = SpringApplication.run(CybertekApplication.class, args);
 
-		CallServices services = context.getBean("clients",CallServices.class);
+		CallService service = context.getBean("customer", CallService.class);
 
-		services.CallService(Cities.DALLAS, RoomType.BED_ROOM);
-
-		double price = services.totalPrice();
-
-		System.out.println(price);
+		service.getTotalPrice(Cities.AUSTIN,RoomType.BED_ROOM);
 
 	}
 
