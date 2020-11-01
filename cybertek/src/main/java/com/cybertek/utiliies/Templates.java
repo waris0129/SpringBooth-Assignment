@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Customer implements CallService {
+public abstract class Templates implements CallService {
 
         private Area area;
         private UnitPrice unitPrice;
         private Calculate calculate;
 
         @Autowired
-        public Customer(Area area, UnitPrice unitPrice, Calculate calculate) {
+        public Templates(Area area, UnitPrice unitPrice, Calculate calculate) {
                 this.area = area;
                 this.unitPrice = unitPrice;
                 this.calculate = calculate;
